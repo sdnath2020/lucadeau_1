@@ -103,7 +103,8 @@ label[for=nav_trigger] span:nth-child(3) {
   height: 140px;
 }
 
-.nav-container a {
+.nav-container label {
+  cursor: pointer;
   color: #333333;
   flex: 1 1 auto;
   font-size: 0.9rem;
@@ -115,11 +116,20 @@ label[for=nav_trigger] span:nth-child(3) {
   transition: all 0.5s ease;
 }
 
-.nav-container a:hover {
+.nav-container label:hover {
   color: var(--white);
   background-color: var(--blue);
 }
 
+
+#hero_01:checked ~ .hero-navigation label[for=hero_01],
+#hero_02:checked ~ .hero-navigation label[for=hero_02],
+#hero_03:checked ~ .hero-navigation label[for=hero_03],
+#hero_04:checked ~ .hero-navigation label[for=hero_04],
+#hero_05:checked ~ .hero-navigation label[for=hero_05] {
+  color: var(--white);
+  background-color: var(--pink);
+}
 
 
 
@@ -149,8 +159,19 @@ label[for=nav_trigger] span:nth-child(3) {
 }
 
 .content-single {
+  display: none;
   padding-bottom: 1.5rem;
 }
+
+#hero_00:checked ~ .hero-content .content-single:nth-child(1),
+#hero_01:checked ~ .hero-content .content-single:nth-child(2),
+#hero_02:checked ~ .hero-content .content-single:nth-child(3),
+#hero_03:checked ~ .hero-content .content-single:nth-child(4),
+#hero_04:checked ~ .hero-content .content-single:nth-child(5),
+#hero_05:checked ~ .hero-content .content-single:nth-child(6) {
+  display: block;
+}
+
 
 .banner-holder {
   padding: 0.75rem;
@@ -192,6 +213,74 @@ label[for=nav_trigger] span:nth-child(3) {
 .product-desc ul {
   list-style-type: square;
 }
+
+
+
+
+.hero-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0.75rem 0;
+}
+
+.product-single {
+  padding: 0.75rem;
+}
+
+.product-single-container {
+  padding: 0.25rem 0.25rem 0.5rem;
+  border: 2px solid var(--light, #fceee5);
+  transition: all 0.5s ease;
+}
+
+.product-single-container:hover {
+  border-color: var(--blue, #08b8f6);
+}
+
+.product-single a {
+  display: block;
+  color: var(--black, #000000);
+  text-decoration: none;
+  font-size: 0.8rem;
+  line-height: 1.25rem;
+  text-align: center;
+}
+
+.product-single-image {
+  padding-top: 100%;
+  background-position: center;
+  background-size: contain;
+}
+
+.product-single-title {
+  height: 4.5rem;
+  overflow: hidden;
+  padding-top: 0.75rem;
+}
+
+
+.hero-desc {
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.hero-desc label {
+  cursor: pointer;
+  color: var(--white, #ffffff);
+  background-color: var(--blue, #08b8f6);
+  font-family: var(--poppins);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  padding: 0.5rem 1.25rem;
+}
+
+.hero-desc label:hover {
+  background-color: var(--pink, #e9a0b4);
+}
+
 
 
 .tab-section {
@@ -309,12 +398,19 @@ label[for=nav_trigger] span:nth-child(3) {
   label[for=nav_trigger] {
     display: none;
   }
+  #hero_01:checked ~ .hero-navigation label[for=hero_01],
+  #hero_02:checked ~ .hero-navigation label[for=hero_02],
+  #hero_03:checked ~ .hero-navigation label[for=hero_03],
+  #hero_04:checked ~ .hero-navigation label[for=hero_04],
+  #hero_05:checked ~ .hero-navigation label[for=hero_05] {
+    background-color: var(--blue);
+  }
   .nav-container {
     flex-direction: row;
     justify-content: flex-end;
     height: auto !important;
   }
-  .nav-container a {
+  .nav-container label {
     padding: 0.75rem 0.25rem;
     text-align: center;
   }
