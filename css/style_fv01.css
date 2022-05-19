@@ -122,13 +122,17 @@ label[for=nav_trigger] span:nth-child(3) {
 }
 
 
+#hero_00:not(:checked) ~ .hero-navigation label[for=hero_00] {
+  color: var(--white);
+  background-color: var(--pink);
+}
+
 #hero_01:checked ~ .hero-navigation label[for=hero_01],
 #hero_02:checked ~ .hero-navigation label[for=hero_02],
 #hero_03:checked ~ .hero-navigation label[for=hero_03],
-#hero_04:checked ~ .hero-navigation label[for=hero_04],
-#hero_05:checked ~ .hero-navigation label[for=hero_05] {
+#hero_04:checked ~ .hero-navigation label[for=hero_04] {
   color: var(--white);
-  background-color: var(--pink);
+  background-color: var(--black);
 }
 
 
@@ -167,8 +171,7 @@ label[for=nav_trigger] span:nth-child(3) {
 #hero_01:checked ~ .hero-content .content-single:nth-child(2),
 #hero_02:checked ~ .hero-content .content-single:nth-child(3),
 #hero_03:checked ~ .hero-content .content-single:nth-child(4),
-#hero_04:checked ~ .hero-content .content-single:nth-child(5),
-#hero_05:checked ~ .hero-content .content-single:nth-child(6) {
+#hero_04:checked ~ .hero-content .content-single:nth-child(5) {
   display: block;
 }
 
@@ -437,8 +440,7 @@ label[for=nav_trigger] span:nth-child(3) {
   #hero_01:checked ~ .hero-navigation label[for=hero_01],
   #hero_02:checked ~ .hero-navigation label[for=hero_02],
   #hero_03:checked ~ .hero-navigation label[for=hero_03],
-  #hero_04:checked ~ .hero-navigation label[for=hero_04],
-  #hero_05:checked ~ .hero-navigation label[for=hero_05] {
+  #hero_04:checked ~ .hero-navigation label[for=hero_04] {
     background-color: var(--blue);
   }
   .nav-container {
